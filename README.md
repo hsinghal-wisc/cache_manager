@@ -6,6 +6,14 @@ I modified the "multiplereader-singlewriter-readerpriority-producerconsumer" alg
 On top of it, then I tried to implement LRU cache using LinkedList.
 
 To run the makefile:
+
+Please download the test folder and run the following commands:
+1. make clean
+2. make
+3. ./server 5003 8 16  
+The above command is in format : server [portnum] [threads] [buffers] 
+Then on local web browser : run 127.0.0.1:5003 (not compiling, seems to hang)
+
 Points to be noted regarding submitted code:
 
 1. Satisfied - Writers/readers are random and can make requests at any time
@@ -15,3 +23,4 @@ Points to be noted regarding submitted code:
 5. Could not implement a distributed system.
 6. However no policy to prevent starvation.
 7. Problems 4 and 5 could be solved together by implementing AFS/NFS type of policies over implemented code
+8. Problem 6 could be solved by implementing dining philosopher on top of the existing code.
